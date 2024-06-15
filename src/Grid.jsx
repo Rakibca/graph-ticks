@@ -4,9 +4,9 @@ function Grid({ numRows, numCols }) {
   return (
     <div className="grid">
       {range(numRows).map((rowIndex) => (
-        <div className="row">
+        <div key={rowIndex} className="row">
           {range(numCols).map((colIndex) => (
-            <div className="cell" />
+            <div key={colIndex} className="cell" />
           ))}
         </div>
       ))}
